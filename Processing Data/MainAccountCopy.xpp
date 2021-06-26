@@ -1,0 +1,22 @@
+static void MainAccountCopy(Args _args)
+{
+    MainAccount mainAccount1;
+    mainAccount mainAccount2;
+    
+    mainAccount1 = MainAccount::findByMainAccountId('153100');
+    
+    ttsBegin;
+    
+    mainAccount2.data(mainAccount1);
+    mainAccount2.MainAccountId = '153101';
+    mainAccount2.Name += ' - copy';
+    
+    if (!mainAccount2.validateWrite())
+    {
+        throw Exception::Error;
+    }
+    
+    mainAccount2.insert();
+    
+    ttsCommit;
+}

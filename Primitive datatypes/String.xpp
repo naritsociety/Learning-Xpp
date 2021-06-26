@@ -1,0 +1,11 @@
+static void StringTypes(Args _args)
+{
+    str 7 fixLengthString;
+    str dynamicLengthString;
+    
+    fixLengthString = "Welcome to Hello World Inc";
+    dynamicLengthString = "Welcome to Hello World Inc";
+    
+    info(fixLengthString);
+    info(dynamicLengthString);    
+}

@@ -1,0 +1,10 @@
+static void IntTypes(Args _args)
+{
+    int officeInFactory;
+    int factorys;
+    
+    officeInFactory = 6;
+    factorys = 4;
+    
+    info(strFmt("This company have %1 offices", officeInFactory*factorys));
+}
